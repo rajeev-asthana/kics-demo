@@ -1,0 +1,16 @@
+image:
+    name: checkmarx/kics:latest
+    entrypoint: [""]
+
+stages:
+    - kics
+
+kics-scan:
+    stage: kics
+    script:
+        - kics scan --no-progress -p ${PWD} -o ${PWD} --report-formats json --output-name kics-results
+    artifacts:
+        name: kics-results.json
+        paths:
+            - kics-results.json
+        when: always
