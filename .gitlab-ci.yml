@@ -8,7 +8,8 @@ stages:
 kics-scan:
     stage: kics
     script:
-        - kics scan --no-progress -p ${PWD} -o ${PWD} --report-formats json --output-name kics-results
+        # - kics scan --no-progress -p ${PWD} -o ${PWD} --report-formats json --output-name kics-results
+        - kics scan --no-progress -p ./gcp -o ./gcp --report-formats json --output-name kics-results
     artifacts:
         name: kics-results.json
         paths:
