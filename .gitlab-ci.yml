@@ -13,5 +13,5 @@ kics-scan:
     artifacts:
         name: kics-results.json
         paths:
-            - kics-results.json
+            - ./gcp/kics-results.json
         when: always
