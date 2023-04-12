@@ -12,7 +12,9 @@ kics-scan:
         # - kics scan --no-progress -p ./gcp -o ./gcp --report-formats json --output-name kics-results
         - kics scan --no-progress -p ./gcp -o ./gcp --report-formats pdf --output-name kics-results
     artifacts:
-        name: kics-results.json
+        # name: kics-results.json
+        name: kics-results.pdf
         paths:
-            - ./gcp/kics-results.json
+            # - ./gcp/kics-results.json
+            - ./gcp/kics-results.pdf
         when: always
